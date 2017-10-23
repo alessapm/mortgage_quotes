@@ -9,14 +9,20 @@ h1 {
 
 .loan-option {
   border: 1px solid #4A87E6;
-}
-
-.gray {
+  border-radius: 3px;
+  width: 30%;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 3px 3px 2px #F5F5F5;
+  color: #483467;
   background-color: #F7F2EB;
 }
 
+
 .header {
-  margin-bottom: 50px;
+  margin: 50px;
 }
 
 .lenders-area {
@@ -29,16 +35,9 @@ h1 {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-.loan-option {
-  width: 31%;
-  margin-bottom: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 .loan-option p {
   width: 50%;
@@ -63,41 +62,137 @@ h1 {
 
 .rate, .term, .payment, .type {
   margin-top: 5px;
-  color: #483467;
+
 }
 
 .payment {
-  font-size: 2em;
+  font-size: 2.5em;
 }
 
-.sort-btn {
-  color: #4A87E6;
+.sort-btn, select {
+  color: white;
   background-color: rgba(0,0,0,0);
-  border: none;
+  border: 1px solid white;
+  border-radius: 3px;
   cursor: pointer;
   outline: none;
+  transition: all .2s linear;
+  height: 19px;
+}
+
+.search-input, .search-btn {
+  height: 40px;
+  border: none;
+  outline: none;
+  border: 2px solid #4A87E6;
+  border-radius: 3px;
+}
+
+.search-input {
+  padding: 0;
+  width: 400px;
+  padding-left: 10px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-right: none;
+}
+
+.search-btn {
+  width: 100px;
+  height: 44px;
+  background-color: #483467;
+  color: white;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-left: none;
+  cursor: pointer;
+}
+
+
+.sort-btn:hover {
+  color:  #4A87E6;
+  background-color: white;
+}
+
+.filters {
+  display: flex;
 }
 
 .filter-container {
-  border: 2px solid green;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4A87E6;
+  height: 80px;
   padding-right: 15px;
+  padding-left: 15px;
   margin-bottom: 50px;
+  color: #F7F2EB;
+  font-size: 10px;
 }
 
 .filter {
   display: flex;
   justify-content: space-between;
-  border: 2px solid pink;
-  margin-bottom: 8px;
+  margin-right: 8px;
+  align-items: center;
 }
 
 .filter p {
   margin-right: 8px;
 }
 
+@media (max-width: 1200px) {
+
+  .loan-option {
+    width: 40%;
+  }
+}
+
+@media (max-width: 850px) {
+  .lenders-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .loan-option {
+    width: 90%;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .loan-option {
+    width: 95%;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+
+  .filter-container {
+    height: 120px;
+  }
+
+  .search-input {
+    width: 250px;
+  }
+
+  .lenders-area {
+    padding: 5px;
+    margin: 0;
+    width: 100%;
+  }
+
+  .header {
+    margin: 15px;
+  }
+}
 
 
+@media (max-width: 450px) {
+  .search-input {
+    width: 150px;
+  }
+}
 

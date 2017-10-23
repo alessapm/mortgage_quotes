@@ -28,7 +28,8 @@ export default class App extends Component {
       this.setState({
         loan_data: response.data,
         didSearch: true
-      })
+      });
+      document.getElementById("form").reset()
     })
   }
 
@@ -49,15 +50,28 @@ export default class App extends Component {
 
   filterLenders(e){
     // console.log('event.target.value: ', e.target.value)
-    this.setState({filterLender: e.target.value})
+    if (e.target.value === 'none'){
+      this.setState({filterLender: ''})
+    } else {
+      this.setState({filterLender: e.target.value})
+    }
+
   }
 
   filterTerms(e){
+    if (e.target.value === 'none'){
+      this.setState({filterTerm: ''})
+    } else {
      this.setState({filterTerm: e.target.value})
+    }
   }
 
   filterRateTypes(e){
+    if (e.target.value === 'none'){
+      this.setState({filterRateType: ''})
+    } else {
      this.setState({filterRateType: e.target.value})
+   }
   }
 
   render() {
@@ -66,9 +80,9 @@ export default class App extends Component {
         <div className="main-container">
           <div className="header">
             <h1> Mortgage Quote Generator</h1>
-            <form onSubmit={this.handleSubmit.bind(this)}>
-              <input type="text" placeholder="enter loan amount" onChange={this.handleChange.bind(this)}/>
-              <button type="submit">Submit</button>
+            <form id="form" onSubmit={this.handleSubmit.bind(this)}>
+              <input className="search-input" type="text" placeholder="Enter loan amount (USD)" onChange={this.handleChange.bind(this)}/>
+              <button className="search-btn" type="submit">Submit</button>
             </form>
           </div>
           <div className="filter-area">
