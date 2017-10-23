@@ -1,0 +1,103 @@
+.App {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  color: #483467;
+}
+
+.loan-option {
+  border: 1px solid #4A87E6;
+}
+
+.gray {
+  background-color: #F7F2EB;
+}
+
+.header {
+  margin-bottom: 50px;
+}
+
+.lenders-area {
+  width: calc(100% - 200px);
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.lenders-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.loan-option {
+  width: 31%;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loan-option p {
+  width: 50%;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.bank-name {
+  font-weight: bold;
+  /*color: #483467;*/
+}
+
+.label {
+  font-size: .75em !important;
+  font-weight: lighter !important;
+  align-self: flex-start;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 15px;
+}
+
+.rate, .term, .payment, .type {
+  margin-top: 5px;
+  color: #483467;
+}
+
+.payment {
+  font-size: 2em;
+}
+
+.sort-btn {
+  color: #4A87E6;
+  background-color: rgba(0,0,0,0);
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.filter-container {
+  border: 2px solid green;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 15px;
+  margin-bottom: 50px;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid pink;
+  margin-bottom: 8px;
+}
+
+.filter p {
+  margin-right: 8px;
+}
+
+
+
+
