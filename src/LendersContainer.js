@@ -4,6 +4,13 @@ import LoanOption from './LoanOption';
 export default class LendersContainer extends Component {
 
   render(){
+    if (this.props.loading){
+        return (
+          <div className="load_icon_container">
+            <div className="load_icon"></div>
+          </div>
+        )
+      }
     const LoanOptions = this.props.loan_data.map(loan_option => {
       // const gray = this.props.loan_data.indexOf(loan_option) % 2 === 0 ? true : false;
       const productWithRateandPayment = loan_option.loan_product + loan_option.interest_rate + loan_option.monthly_payment;

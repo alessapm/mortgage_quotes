@@ -3,9 +3,11 @@
   font-family: 'Raleway', sans-serif;
 }
 
-h1 {
+h1, h2 {
   color: #483467;
 }
+
+
 
 .loan-option {
   border: 1px solid #4A87E6;
@@ -36,6 +38,25 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+@keyframes spin {
+    0% {transform:rotateZ(-360deg);}
+}
+
+.load_icon_container {
+  display: flex;
+  padding-top: 100px;
+  justify-content: center;
+}
+
+.load_icon {
+  height: 50px;
+  width: 50px;
+  border: 10px solid #483467;
+  border-top: 10px solid #F7F2EB;
+  border-radius: 50%;
+  animation: spin 2s ease infinite;
 }
 
 
