@@ -81,7 +81,7 @@ export default class LendersContainer extends Component {
     if (!optionsExist && this.props.didSearch) {
       return(
         <div className="lenders-container">
-          <h1 className="error">Sorry, your search didn't return any results. Please adjust your search and try again.</h1>
+          <h2 className="error">Sorry, your search didn't return any results. Please adjust your search and try again.</h2>
         </div>
       )
     }
@@ -94,12 +94,16 @@ export default class LendersContainer extends Component {
     } else if (this.props.didSearch) {
       return(
         <div className="lenders-container">
-          <h1 className="error">Sorry, your search did not return any results</h1>
+          <h2 className="error">Sorry, your search did not return any results</h2>
         </div>
       )
     } else {
       return (
         <div className="lenders-container">
+          <div className="lenders-spot-holder">
+            <p>ENTER SEARCH OPTIONS</p>
+            <div className="houses"></div>
+          </div>
         </div>
       )
     }

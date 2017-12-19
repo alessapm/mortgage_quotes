@@ -5,9 +5,13 @@
 
 h1, h2 {
   color: #483467;
+  font-weight: bold;
 }
 
-
+h1 {
+  text-shadow: 1px 1px 0px white;
+  font-size: 3em;
+}
 
 .loan-option {
   border: 1px solid #4A87E6;
@@ -23,8 +27,30 @@ h1, h2 {
 }
 
 
+.lenders-spot-holder {
+  height: 150px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
 .header {
-  margin: 50px;
+  margin: 40px;
+  padding: 10px;
+  background-image: url('img/house_banner.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.houses {
+  background-image: url('img/Houses.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 .lenders-area {
