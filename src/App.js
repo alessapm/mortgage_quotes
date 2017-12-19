@@ -25,7 +25,7 @@ export default class App extends Component {
 
   handleSubmit(e){
     e.preventDefault();
-    Axios.get(`http://morty.mockable.io/quotes?loan_amount=${this.state.loan_amount}`)
+    Axios.get(`https://morty.mockable.io/quotes?loan_amount=${this.state.loan_amount}`)
     .then(response => {
       let amount_num = parseInt(this.state.loan_amount, 10);
       let amount_formatted = amount_num.toLocaleString();
